@@ -189,3 +189,23 @@ list.ejs Example Code of wrapping your JavaScript
 
 
 3. Lets create a list on our list.ejs page that loops through our newItemsList. Don't forget to wrap your javascript in EJS.
+
+
+### Scope
+---
+
+
+What is Scope?
+    - Scope is the range in which a variable can be accessed. 
+    - You cannot access variable outside the scope in which they were created.
+    - Creating Variables outside a function makes it accessible globally.
+
+Differences between the types of variables and how their scope can be accessed.
+
+-Variable inside a function are local variables.
+-Variables outside a function are global variables.
+-Variables in an if/else/for/do/while: var is global let/const is local
+
+This is why we try to avoid using var, and use let or const instead.
+
+
