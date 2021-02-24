@@ -209,3 +209,18 @@ Differences between the types of variables and how their scope can be accessed.
 This is why we try to avoid using var, and use let or const instead.
 
 
+### Adding Local Stylesheets
+---
+
+We no longer run a static website, so we need to serve them from the server. Thats why our CSS folder won't work. 
+ - This needs to setup for every folder added to the application
+
+
+Public Folder is our solution. If we add 
+
+```
+app.use(express.static("public"));
+```
+
+Now we can add our public files/folders into a directory that can be accessed publicy. Don't forget to not put sensitive data in this folder.
+
