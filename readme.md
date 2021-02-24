@@ -224,3 +224,23 @@ app.use(express.static("public"));
 
 Now we can add our public files/folders into a directory that can be accessed publicy. Don't forget to not put sensitive data in this folder.
 
+### Adding Work List Module
+---
+
+1. Create workItems array; Empty;
+
+2. Create get route; res.render our list, passing our new object with listTitle and newListItems
+
+3. Create post route; tap into req.body.newItem entered.
+
+4. Push item to workItems array and res.redirect to work route.
+
+
+
+### Layouts and Partials
+---
+
+Layouts let you create reusable chuncks of code, that makes consistency and repitition a breeze
+    - Think header, footer, multiple page content that we don't want to recode.
+
+1. Create header and footer files.
