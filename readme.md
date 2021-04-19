@@ -244,3 +244,36 @@ Layouts let you create reusable chuncks of code, that makes consistency and repi
     - Think header, footer, multiple page content that we don't want to recode.
 
 1. Create header and footer files.
+
+
+### Node.js - How to Import and Export Modules
+---
+[NodeJs-Modules](https://nodejs.org/api/modules.html)
+
+1. Why would we want to import or export a module?
+    - This keeps code that doesn't really relate to the application in a seperate area.
+    - For example, getDate() preferences
+
+## Import/Export Challenge
+---
+
+1. Create date.js, move the code over
+
+2. Create a const called date and require our js file from step1. You will need the --dirname + as this is a local file.
+    -const date = require(__dirname + "/date.js");
+
+3. This requires the code to be ran upon load but keep it seperate
+
+4. Lets export the date.js file next
+    -  module.exports = "Hello World";  // You can actually export strings
+    -  module.exports = getDate;  // No () because we don't want it to run immediately
+
+5. Now that date.js module has been imported/exported we can call it and use it in our main code with cluttering up the application with the unneccesary logic.
+
+6. Now if we want to add another function from the same module we can be more specific when we are exporting
+    -  module.exports.getDay = getDay;
+
+7. Refactoring the Date and App js
+    - We changed var/let to const
+    - removed module.exports and jsut made it exports // as per documentation.
+    -  export our anonymous functions all in the same line
